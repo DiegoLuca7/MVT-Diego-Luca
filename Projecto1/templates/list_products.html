@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de productos</h2>
+        {% for camisetas in products%}
+       <h2>El producto es {{camisetas.name}}, su precio es de {{camisetas.price}}</h2> 
+
+        {% if camisetas.stock == True %} 
+        <p>Actualmente hay stock</p>
+        {% else %}
+            <h2>Actualmente no tenemos stock</h2>
+            {% endif%}
+        
+
+     {% endfor %}
+
+    <h2></h2>
+    <h2></h2>
+    <h3></h3>
+</body>
+</html>
